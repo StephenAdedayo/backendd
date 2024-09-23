@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
 
+
 const userSchema = mongoose.Schema({
 
    firstName : {
@@ -34,7 +35,10 @@ const userSchema = mongoose.Schema({
     type : String,
     required : true,
     default : false
-   }
+   }, 
+
+   resetPasswordToken : String,
+   resetPasswordExpires : Date
 
 
 }, 
